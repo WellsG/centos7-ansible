@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  user: root
+
+  tasks:
+  - name: install mariadb
+    yum: name=mariadb state=present
+         name=mariadb-server state=present
+  - name: install apache
+    yum: name=httpd state=present
+  - name: start mariadb
+    service: name=mariadb state=restarted
+  - name: start apache
+    service: name=httpd state=restarted
