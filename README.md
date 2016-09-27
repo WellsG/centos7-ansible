@@ -8,4 +8,5 @@ sudo docker run --privileged -ti -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 80:80 ce
 sudo docker exec -it [CONTAINER_ID] /bin/bash
 
 ### * REFs
+https://hub.docker.com/_/centos/
 http://jperrin.github.io/centos/2014/09/25/centos-docker-and-systemd/
