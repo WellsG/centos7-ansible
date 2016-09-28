@@ -1,7 +1,7 @@
 ---
 
 #- name: download jbeap
-#  get_url: url=http://download.eng.pek2.redhat.com/released/JBEAP-6/6.4.10/jboss-eap-6.4.10-full-build.zip dest=/opt/jboss-eap-6.4.10-full-build.zip
+#  get_url: url=http://<>/JBEAP-6/6.4.10/jboss-eap-6.4.10-full-build.zip dest=/opt/jboss-eap-6.4.10-full-build.zip
 
 #- name: Extract archive
 #  unarchive: src=/opt/jboss-eap-6.4.10-full-build.zip dest=/opt/ creates=/usr/share/jboss-as
