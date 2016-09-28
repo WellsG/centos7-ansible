@@ -1,3 +1,8 @@
 ---
 
 jboss_user: jboss
+
+jboss_verions: {
+    "version": "6.4",
+    "release": "6.4.10"
+}
