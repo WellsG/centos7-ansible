@@ -33,5 +33,6 @@ ansible-playbook ansible-sample/roles/mysql/handlers/mysql.yml
 
 
 ### * REFs
-https://hub.docker.com/_/centos/
-http://jperrin.github.io/centos/2014/09/25/centos-docker-and-systemd/
+[Centos](https://hub.docker.com/_/centos/)
+[Centos systemd](http://jperrin.github.io/centos/2014/09/25/centos-docker-and-systemd/)
+[Wildfly role](https://github.com/pinterb/bootstrap/tree/master/provisioning/ansible/roles/wildfly/install)
