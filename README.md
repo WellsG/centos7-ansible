@@ -31,6 +31,12 @@ run ansible inside container
 ansible-playbook ansible-sample/roles/mysql/handlers/mysql.yml
 ```
 
+### * Run JBoos EAP 
+```
+git clone https://github.com/WellsG/centos7-ansible
+cd centos7-ansible/ansible-sample/
+ansible-playbook -vvv playbooks/main.yml
+```
 
 ### * REFs
 [Centos](https://hub.docker.com/_/centos/)  <br>
