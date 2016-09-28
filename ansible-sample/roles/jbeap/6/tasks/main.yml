@@ -1,0 +1,35 @@
+---
+
+#- name: download jbeap
+#  get_url: url=http://download.eng.pek2.redhat.com/released/JBEAP-6/6.4.10/jboss-eap-6.4.10-full-build.zip dest=/opt/jboss-eap-6.4.10-full-build.zip
+
+#- name: Extract archive
+#  unarchive: src=/opt/jboss-eap-6.4.10-full-build.zip dest=/opt/ creates=/usr/share/jboss-as
+  
+- name: Rename install directory
+  command: chdir=/usr/share /bin/mv /opt/jboss-eap-6.4 jboss-as creates=/usr/share/jboss-as
+     
+- name: Create directory /etc/jboss-as
+  file: path=/etc/jboss-as state=directory
+
+- name: Config jboss-as.conf
+  action: template src=../templates/jboss-as.conf.j2 dest=/etc/jboss-as/jboss-as.conf
+           
+- name: Add group "jboss"
+  group: name={{ jboss_user }}
+               
+- name: Add user "jboss"
+  user: name={{ jboss_user }} group={{ jboss_user }} home=/usr/share/jboss-as
+                   
+- name: Change ownership of jbeap installation
+  file: path=/usr/share/jboss-as/ owner={{ jboss_user }} group={{ jboss_user }} state=directory recurse=yes
+
+- name: Change ownership of /var/run/jboss-as
+  file: path=/var/run/jboss-as/ owner={{ jboss_user }} group={{ jboss_user }} state=directory recurse=yes
+                      
+- name: Copy the init script
+  copy: src=/usr/share/jboss-as/bin/init.d/jboss-as-standalone.sh dest=/etc/init.d/jbossas mode=0755
+                           
+- name: Enable jbeap to be started at boot
+  service: name=jbossas enabled=yes state=restarted
+  

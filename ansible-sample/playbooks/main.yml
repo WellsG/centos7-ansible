@@ -3,3 +3,4 @@
   roles:
     - {role: "../roles/java"}
     - {role: "../roles/mysql"}
+    - {role: "../roles/jbeap/6"}

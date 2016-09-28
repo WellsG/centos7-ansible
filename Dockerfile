@@ -6,12 +6,15 @@ MAINTAINER wguo@redhat.com
 # install epel repo
 RUN yum -y install epel-release
 
-# install vim / sudo
-RUN yum -y install vim sudo
+# install initscripts
+RUN yum -y install initscripts
+
+# install vim / sudo / wget / unzip
+RUN yum -y install vim sudo wget unzip
 
 # install ansible
 RUN yum -y install ansible
 
-EXPOSE 80 3306 443 22
+EXPOSE 80 8080 3306 443 22
 
 CMD ["/usr/sbin/init"]
