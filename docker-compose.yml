@@ -1,0 +1,8 @@
+centos7-ansible:
+   build: .
+   ports:
+     - "8080:8080"
+   volumes:
+     - .:/home/
+     - /sys/fs/cgroup:/sys/fs/cgroup:ro
+   privileged: true
