@@ -1,5 +1,5 @@
 # http://jperrin.github.io/centos/2014/09/25/centos-docker-and-systemd/
-FROM centos7-systemd
+FROM centos7_systemd
 
 MAINTAINER wguo@redhat.com
 
