@@ -1,5 +1,8 @@
-centos7-ansible:
-   build: .
+systemd:
+   build: ../centos7-systemd/
+
+ansible:
+   build: ../
    ports:
      - "8080:8080"
    volumes:
