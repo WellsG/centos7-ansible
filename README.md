@@ -32,7 +32,7 @@ centos7-ansible                                   latest              9c10b22cc3
 centos7-systemd                                   latest              2af0a25082ad        4 hours ago         196.7 MB
 ```
 
-### * Run docker with systemd
+start container:
 ```
 sudo docker run --privileged -ti -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 80:80 centos7-ansible
 ```
