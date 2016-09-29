@@ -1,7 +1,7 @@
 ## centos7-ansible
 This is used to build the basic images for ansible users.  
 
-> * Build via docker-compose
+### * Build via docker-compose
 ```
 cd centos7
 sudo docker-compose build
@@ -18,8 +18,7 @@ sudo docker-compose run --service-ports ansible
 ```
 
 
-> * Build images step by step <br>
-### * Build images
+### * Build images via docker build 
 ```
 cd centos7-systemd/
 docker build --rm -t centos7-systemd . 
