@@ -21,20 +21,20 @@ sudo docker-compose run --service-ports ansible
 ### * Build images via docker build 
 ```
 cd centos7-systemd/
-docker build --rm -t centos7-systemd . 
+docker build --rm -t centos7_systemd . 
 cd ..
-docker build --rm -t centos7-ansible .
+docker build --rm -t centos7_ansible .
 ```
 ```
 [~/docker/dockerdev] $ sudo docker images
 REPOSITORY                                        TAG                 IMAGE ID            CREATED             SIZE
-centos7-ansible                                   latest              9c10b22cc3ef        53 minutes ago      447.6 MB
-centos7-systemd                                   latest              2af0a25082ad        4 hours ago         196.7 MB
+centos7_ansible                                   latest              9c10b22cc3ef        53 minutes ago      447.6 MB
+centos7_systemd                                   latest              2af0a25082ad        4 hours ago         196.7 MB
 ```
 
 start container:
 ```
-sudo docker run --privileged -ti -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 80:80 centos7-ansible
+sudo docker run --privileged -ti -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8080:8080 centos7_ansible
 ```
 
 ### * Exec bash to get shell
