@@ -18,7 +18,7 @@ sudo docker-compose run --service-ports ansible
 ```
 
 
-> * Build images step by step
+> * Build images step by step <br>
 ### * Build images
 ```
 cd centos7-systemd/
