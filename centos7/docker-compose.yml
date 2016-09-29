@@ -6,6 +6,6 @@ ansible:
    ports:
      - "8080:8080"
    volumes:
-     - .:/home/
+     - .:/workspace/
      - /sys/fs/cgroup:/sys/fs/cgroup:ro
    privileged: true
