@@ -15,6 +15,8 @@ RUN yum -y install vim sudo wget unzip
 # install ansible
 RUN yum -y install ansible
 
+VOLUME ["/workspace"]
+
 EXPOSE 80 8080 3306 443 22
 
 CMD ["/usr/sbin/init"]
