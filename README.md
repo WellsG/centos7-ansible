@@ -1,6 +1,24 @@
 ## centos7-ansible
 This is used to build the basic images for ansible users.  
 
+> * Build via docker-compose
+```
+cd centos7
+sudo docker-compose build
+```
+```
+[~/GitRepo/github/centos7-ansible/centos7] (master) $ sudo docker images
+REPOSITORY                                        TAG                 IMAGE ID            CREATED             SIZE
+centos7_ansible                                   latest              5b191cd8abec        20 seconds ago      469.2 MB
+centos7_systemd                                   latest              8608b442190f        6 minutes ago       196.7 MB
+```
+start container:
+```
+sudo docker-compose run --service-ports ansible
+```
+
+
+> * Build images step by step
 ### * Build images
 ```
 cd centos7-systemd/
