@@ -59,3 +59,4 @@ ansible-playbook -vvv playbooks/main.yml
 [Centos systemd](http://jperrin.github.io/centos/2014/09/25/centos-docker-and-systemd/)  <br>
 [Wildfly role](https://github.com/pinterb/bootstrap/tree/master/provisioning/ansible/roles/wildfly/install)  <br>
 [Config JBEAP as Service](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Installation_Guide/Install_JBoss_Enterprise_Application_Platform_6_Red_Hat_Enterprise_Linux_Service.html)  <br>
+[UI For Docker](https://github.com/kevana/ui-for-docker) <br>
