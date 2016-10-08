@@ -17,7 +17,6 @@ start container:
 sudo docker-compose run --service-ports ansible
 ```
 
-<hr>
 ### * Build images via docker build 
 ```
 cd centos7-systemd/
@@ -36,7 +35,7 @@ start container:
 ```
 sudo docker run --privileged -ti -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8080:8080 centos7_ansible
 ```
-
+<hr>
 ### * Exec bash to get shell
 ```
 sudo docker exec -it [CONTAINER_ID] /bin/bash
