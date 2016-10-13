@@ -1,0 +1,22 @@
+---
+
+## Install the offical rvm roles first  [doc] https://github.com/rvm/rvm1-ansible
+# sudo ansible-galaxy install rvm_io.rvm1-ruby 
+
+- name: Configure servers with ruby support
+  hosts: localhost
+
+  roles:
+    - { role: rvm_io.rvm1-ruby, 
+        tags: ruby, 
+        become: yes,
+        rvm1_rubies: ['ruby-2.2.2','ruby-2.2.5'],
+        rvm1_install_flags: '--auto-dotfiles --user-install',
+        rvm1_install_path: '/home/wguo/.rvm',
+        rvm1_user: 'wguo',
+      }
+
+## Config env 
+# vim ~/.bash_profile
+# append "$HOME/.rvm/bin" to PATH
+# source ~/.base_profile
