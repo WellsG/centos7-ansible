@@ -20,3 +20,14 @@
 # vim ~/.bash_profile
 # append "$HOME/.rvm/bin" to PATH
 # source ~/.base_profile
+# [wguo@wguo ansible-sample]$ rvm list
+#
+# rvm rubies
+#
+#    ruby-2.2.2 [ x86_64 ]
+#    =* ruby-2.2.5 [ x86_64 ]
+#
+#    # => - current
+#    # =* - current && default
+#    #  * - default
+
