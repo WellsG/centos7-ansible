@@ -1,0 +1,10 @@
+---
+
+  # git tools
+  - name: install git tools
+    yum: name={{ item }} state=present
+    with_items:
+       - git
+       - gitk
+
+
