@@ -7,7 +7,7 @@
   hosts: localhost
 
   roles:
-    - { role: rvm_io.rvm1-ruby, 
+    - { role: rvm_io.ruby, 
         tags: ruby, 
         become: yes,
         rvm1_rubies: ['ruby-2.2.2','ruby-2.2.5'],
