@@ -42,7 +42,7 @@ sudo docker exec -it [CONTAINER_ID] /bin/bash
 ```
 
 ### * Test
-run ansible inside container
+run ansible inside container -- Please remember to update ansible first if needed
 ```
 ansible-playbook ansible-sample/roles/mysql/handlers/mysql.yml
 ```
