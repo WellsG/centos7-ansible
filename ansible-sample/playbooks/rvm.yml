@@ -1,7 +1,8 @@
 ---
 
 ## Install the offical rvm roles first  [doc] https://github.com/rvm/rvm1-ansible
-# sudo ansible-galaxy install rvm_io.rvm1-ruby 
+# `Please remember to update ansible first if needed`
+# sudo ansible-galaxy install rvm_io.ruby 
 
 - name: Configure servers with ruby support
   hosts: localhost
