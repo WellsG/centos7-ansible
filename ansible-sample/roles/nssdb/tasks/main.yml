@@ -1,0 +1,19 @@
+---
+
+- name: install cert in nssdb
+  command: certutil -d /etc/pki/nssdb/ -A -i ./app_root.crt -n app_root_name -t CT,c,c
+
+- name: check if the app key and cert exists in nssdb
+  command: certutil -L -a -n "{{ app_cert_name }}" -d /etc/pki/nssdb
+  register: app_certutil_list
+  changed_when: False
+  failed_when: False
+
+- name: import app key and cert into nssdb
+  command: pk12util -i ./app-dev.p12 -d /etc/pki/nssdb
+  when: app_certutil_list.rc != 0
+
+- name: trust app
+  command: certutil -A -t TC,Tw,Tw -n "{{ app_cert_name }}" -d /etc/pki/nssdb -i ./app-dev.crt
+  when: app_certutil_list.rc != 0
+
